@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: #5f27cd; /* Cor de fundo */
+    padding: 16px 0; /* Criar um espaçamento */
+    color: #fff; /* Cor da fonte */
+    display: flex; /* Deixar ao lado do texto */
+    border-bottom: 16px solid #341f97; /* Colocar borda no fundo */
+    justify-content: center; /* Centralizar o conteúdo */
+    text-transform: uppercase; /* Deixar o texto em maiúsculo */
+    font-style: italic; /* Mudar fonte para itálico */
+}
+
+header button {
+    margin-left: 16px; /* Margem a esquerda */
+}
+
+form {
+    background-color: #c8d6e5; /* Cor de fundo */
+    padding: 24px 0; /* Criar um espaçamento */
+    text-align: center; /* Centralizar o texto */
+    display: none; /* Ocultar formulário */
+}
+
+form h2 {
+    margin-bottom: 16px; /* Colocar margem de fundo */
+}
+
+input,
+button {
+    padding: 16px; /* Criar um espaçamento */
+}
+
+button {
+    background-color: #009432; /* Cor de fundo */
+    border: none; /* Remover borda */
+    font-weight: bold; /* Deixar a fonte em negrito */
+    text-transform: uppercase; /* Deixar o texto em maiúsculo */
+    color: #fff; /* Cor da fonte */
+    cursor: pointer; /* Modificar o cursos ao aproximar do botão */
+}
+
+#botao-cancelar {
+    background-color: red;
+}
+
+ul {
+    display: flex; /* Para deixar os elementos dentro do "ul" um ao lado do outro */
+    flex-wrap: wrap; /* Para quando ocupar toda a tela ele crie uma nova linha */
+}
+
+ul li {
+    max-width: 25%;
+    list-style: none; /* Remover pontos da lista na imagem */
+    position: relative; /* Adicionar o texto da imagem ao elemento pai */
+    max-height: 280px; /* Tamanho máximo do link */
+    overflow-y: hidden; /* Definir o tamanho máximo da imagem na tela (Deixar todas em um tamanho uniforme) */
+
+}
+
+ul li img {
+    width: 100%;
+}
+
+.overlay-imagem-link {
+    padding: 16px; /* Espaçamento interno */
+    background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo com transparência */
+    position: absolute; /* Posisionar o elemento no canto inferior do li */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0; /* Fazer com que o elemento só apareça quando colocamos o mouse em cima da imagem (Ajustar também o ul li:hover .overlay-imagem-link) */
+    transition: all ease .5s; /* Adicionar um efeito de transição */
+}
+
+.overlay-imagem-link a {
+    color: #fff; /* Cor da fonte */
+    text-decoration: none; /* Remover decorações do texto (underline) */
+}
+
+ul li:hover .overlay-imagem-link { 
+    opacity: 1; /* Fazer com que o elemento só apareça quando colocamos o mouse em cima da imagem (Ajustar também o .overlay-imagem-link) */
+}
